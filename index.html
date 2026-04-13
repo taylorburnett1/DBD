@@ -312,6 +312,79 @@
   }
   .rhythm-desc { font-size: 12px; color: var(--dim); line-height: 1.6; }
 
+  /* MEETING DETAILS */
+  .meeting-section {
+    padding: 80px 48px;
+    background: var(--black);
+    border-bottom: 0.5px solid var(--rule);
+  }
+  .meeting-inner {
+    max-width: 1100px; margin: 0 auto;
+  }
+  .meeting-header {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+  .meeting-header .eyebrow {
+    font-size: 9px; font-weight: 700; letter-spacing: 0.25em;
+    text-transform: uppercase; color: var(--dim);
+    display: flex; align-items: center; justify-content: center; gap: 16px;
+    margin-bottom: 16px;
+  }
+  .meeting-header .eyebrow::before, .meeting-header .eyebrow::after {
+    content: ''; display: block; width: 40px; height: 0.5px; background: var(--rule);
+  }
+  .meeting-header h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 400; color: var(--white); line-height: 1.1;
+  }
+  .meeting-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+  }
+  .meeting-card {
+    background: var(--charcoal);
+    padding: 40px 36px;
+    text-align: center;
+    border-top: 2px solid var(--accent-mental);
+  }
+  .meeting-card-icon {
+    font-size: 28px; margin-bottom: 16px; opacity: 0.7;
+  }
+  .meeting-card-label {
+    font-size: 9px; font-weight: 700; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--accent-mental);
+    margin-bottom: 12px;
+  }
+  .meeting-card-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(18px, 2.5vw, 26px);
+    font-weight: 400; color: var(--white);
+    line-height: 1.3;
+  }
+  .meeting-card-sub {
+    font-size: 11px; color: var(--dim);
+    margin-top: 8px; line-height: 1.6;
+  }
+  .meeting-card a {
+    color: var(--accent-mental);
+    text-decoration: none;
+    font-size: 12px; font-weight: 600;
+    letter-spacing: 0.08em;
+    border-bottom: 0.5px solid rgba(122,116,212,0.3);
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .meeting-card a:hover {
+    color: var(--white);
+    border-color: var(--white);
+  }
+  @media (max-width: 768px) {
+    .meeting-section { padding: 60px 24px; }
+    .meeting-grid { grid-template-columns: 1fr; }
+  }
+
   /* MANTRA */
   .mantra-section {
     padding: 120px 48px;
@@ -570,6 +643,38 @@
       <div class="rhythm-num">1</div>
       <div class="rhythm-label">Goal per session</div>
       <div class="rhythm-desc">You will always leave with something actionable. No fluff, no filler.</div>
+    </div>
+  </div>
+</section>
+
+<!-- MEETING DETAILS -->
+<section class="meeting-section">
+  <div class="meeting-inner">
+    <div class="meeting-header reveal">
+      <div class="eyebrow">Session Info</div>
+      <h2>Where & When We Meet</h2>
+    </div>
+    <div class="meeting-grid">
+      <div class="meeting-card reveal">
+        <div class="meeting-card-icon">📅</div>
+        <div class="meeting-card-label">Meeting Days</div>
+        <div class="meeting-card-value">2nd & 4th<br>of the Month</div>
+        <div class="meeting-card-sub">Starting April 30th</div>
+      </div>
+      <div class="meeting-card reveal">
+        <div class="meeting-card-icon">⏰</div>
+        <div class="meeting-card-label">Meeting Time</div>
+        <div class="meeting-card-value">11:00 a.m.</div>
+        <div class="meeting-card-sub">Eastern Standard Time</div>
+      </div>
+      <div class="meeting-card reveal">
+        <div class="meeting-card-icon">🔗</div>
+        <div class="meeting-card-label">Meeting Link</div>
+        <div class="meeting-card-value" style="font-size:16px;">Zoom</div>
+        <div class="meeting-card-sub" style="margin-top:12px;">
+          <a href="https://us06web.zoom.us/j/83908818925" target="_blank">Join the Meeting →</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
